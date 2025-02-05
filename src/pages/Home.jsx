@@ -3,6 +3,16 @@ import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../services/api";
 import "../css/Home.css";
 
+/*
+    This is the home page. It displays the popular movies.
+    We are using state variables to store the search query, the movies, the error and the loading state.
+    For this purpose we are using the useState hook. This hook provided by react.
+    useEffect hook allows us to run some code when there is a change in the dependencies passed via the second parameter.
+    In this case we are passing an empty array as the second parameter. This means that the code inside the useEffect hook will run only once when the component is mounted.
+    We are using the getPopularMovies function to get the popular movies from the api. This function is defined in the api.js file in the services folder.
+    We are using the searchMovies function to search for movies. This function is defined in the api.js file in the services folder.
+*/
+
 function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);

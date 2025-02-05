@@ -1,8 +1,13 @@
 import {createContext, useState, useContext, useEffect} from "react"
 /*
 Context passing is basically a fancy way of passing session state data between components.
-Instead of declaring a state in very high level component, we can create a jsx file
-*/ 
+Instead of declaring a state in very high level component, we can create a jsx file in a contexts folder and wrap the components that need the state in a provider.
+This is an example of how to use context sharing from a parent component to a child component.
+
+We create a context object using the createContext function. This is an example of how to use context sharing from a parent component to a child component.
+We create a custom hook using the useContext function. This is an example of how to use context sharing from a parent component to a child component.
+We create a provider component that wraps the components that need the state. 
+*/
 const MovieContext = createContext()
 
 export const useMovieContext = () => useContext(MovieContext)

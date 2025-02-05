@@ -1,6 +1,16 @@
 import "../css/MovieCard.css"
 import { useMovieContext } from "../contexts/MovieContext"
 
+/*
+In this component we are using the custom hook that we prepared in the MovieContext.jsx file.
+We had wrapped the components in App.jsx file.
+From there now we can access the context ( state variables) from the useMovieContext hook.
+We are checking if the movie is already in the favorites array. If it is, we display a heart icon. If it is not, we display an empty heart icon.
+We are using the isFavorite function to check if the movie is already in the favorites array.
+We are using the addToFavorites function to add the movie to the favorites array.
+We are using the removeFromFavorites function to remove the movie from the favorites array.
+All these functions are defined in the MovieContext.jsx file.
+*/
 function MovieCard({movie}) {
     const {isFavorite, addToFavorites, removeFromFavorites} = useMovieContext()
     const favorite = isFavorite(movie.id)
